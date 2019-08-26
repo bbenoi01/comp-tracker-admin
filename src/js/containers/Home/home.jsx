@@ -51,8 +51,8 @@ export default class Home extends Component {
 
         return (
             <Grid container spacing={2}>
-                <Grid item xs={4} />
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={4}/>
+                <Grid item xs={12} sm={4}>
                     <Card>
                         <CardHeader title="Quota" className='card-header'/>
                         <CardContent>
@@ -80,7 +80,7 @@ export default class Home extends Component {
                         </CardActions>
                     </Card>
                 </Grid>
-                <Grid item xs={4}/>
+                <Grid item xs={12} sm={4}/>
             </Grid>
         );
     }
