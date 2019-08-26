@@ -9,7 +9,7 @@ import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 
 import {
     logoutUser,
-    updateMetrics
+    // updateMetrics
 } from './actions';
 
 export default class Navbar extends Component {
@@ -18,27 +18,27 @@ export default class Navbar extends Component {
         dispatch(logoutUser())
     }
 
-    handleClear = () => {
-        const { dispatch } = this.props;
-        const userMetrics = {
-            hum: 0,
-            humx: 0,
-            other: 0,
-            tablets: 0,
-            jetpacks: 0,
-            virtual: 0,
-            desktop: 0,
-            whp: 0,
-            features: 0,
-            multi: 0,
-            single: 0,
-            techCoach: 0,
-            ew: 0,
-            addLine: 0,
-            accessories: 0
-        }
-        dispatch(updateMetrics(userMetrics))
-    }
+    // handleClear = () => {
+    //     const { dispatch } = this.props;
+    //     const userMetrics = {
+    //         hum: 0,
+    //         humx: 0,
+    //         other: 0,
+    //         tablets: 0,
+    //         jetpacks: 0,
+    //         virtual: 0,
+    //         desktop: 0,
+    //         whp: 0,
+    //         features: 0,
+    //         multi: 0,
+    //         single: 0,
+    //         techCoach: 0,
+    //         ew: 0,
+    //         addLine: 0,
+    //         accessories: 0
+    //     }
+    //     dispatch(updateMetrics(userMetrics))
+    // }
 
     render() {
         const { authenticated } = this.props;
@@ -48,7 +48,7 @@ export default class Navbar extends Component {
                 <Toolbar className='nav-container'>
                     {authenticated ? (
                         <Fragment>
-                            <MyButton tip={'Clear'} onClick={this.handleClear}>
+                            <MyButton tip={'Clear'}>
                                 <ClearAllIcon />
                             </MyButton>
                             <DoneIcon id='logo'/>
